@@ -1,0 +1,13 @@
+import requests
+>>> placename=input("Enter the placename-->")
+url="http://api.openweathermap.org/data/2.5/weather?q=%s&cnt=10&mode=html&appid=55dfe2de76932d0649a876e2224ca09f"%(placename)
+respObj=requests.get(url)
+>>> html=respObj.text
+>>> len(html)
+A=html.split("\n")
+>>> len(A)
+print(A[0:27],A[34:36])
+
+#OR
+
+del A [27:34]
