@@ -1,0 +1,10 @@
+import requests
+>>> animalslp="https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv"
+>>> respObj=requests.get(animalslp)
+>>> csv=respObj.text
+>>> a=csv.split("\n")
+for each in a:
+	b= each.split(",")[0]
+	c= each.split(",")[5]
+	print(b,"\t", c)
+  
