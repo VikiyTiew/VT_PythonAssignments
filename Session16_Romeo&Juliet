@@ -1,0 +1,5 @@
+import requests
+>>> romeoNjuliet="https://ia800302.us.archive.org/20/items/romeojuliet01shak/romeojuliet01shak_djvu.txt"
+>>> respObj=requests.get(romeoNjuliet)
+>>> story= respObj.text
+>>> print(story.upper())
