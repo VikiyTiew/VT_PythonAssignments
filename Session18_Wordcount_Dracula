@@ -1,0 +1,21 @@
+>>> import requests
+>>> dracula="https://ia800302.us.archive.org/10/items/draculabr00stokuoft/draculabr00stokuoft_djvu.txt"
+>>> resp=requests.get(dracula).text
+>>> type(resp)
+<class 'str'>
+>>> data=resp.lower()
+linedata=data.split("\n")
+>>> newdata=[]
+>>> for line in linedata:
+    if line is not '':
+        newdata.append(line)
+>>> type(newdata)
+<class 'list'> 
+>>> wordcount={}
+>>> for line in newdata:
+    for word in line.split():
+        if word not in wordcount:
+            wordcount[word]=1
+        else:
+            wordcount[word]=wordcount[word]+1
+       
