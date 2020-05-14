@@ -1,0 +1,8 @@
+def getdata(placename):
+	import requests, json
+	url="http://api.openweathermap.org/data/2.5/weather?q=%s&cnt=10&mode=html&appid=*************55dfe2de76932d0649a876e2224ca09f"%(placename)
+	r=requests.get(url).text
+	data=json.loads(r)
+	return data
+
+>>> getdata("paris")
